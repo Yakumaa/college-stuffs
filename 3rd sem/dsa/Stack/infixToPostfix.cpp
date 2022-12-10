@@ -1,6 +1,6 @@
 #include <iostream>
 #include <stack>
-// #include <string.h>
+#include <string.h>
 using namespace std;
 
 int precedence(char c){
@@ -55,9 +55,9 @@ void inToPost(string s){
                     result += st.top();
                     st.pop();
                 }
-                st.push(c);
+                
             }
-            
+            st.push(c);
         }
         
     }
@@ -67,4 +67,15 @@ void inToPost(string s){
     }
     cout << result << endl;
     
+}
+
+int main(){
+    string exp;
+    char ch;
+    // do
+    // {
+    //     cout << "En"
+    // } while (ch != 'n' || ch == 'y');
+    exp = "(a+b)*c";
+    inToPost(exp);
 }
