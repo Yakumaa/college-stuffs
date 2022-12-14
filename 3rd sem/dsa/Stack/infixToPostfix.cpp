@@ -78,4 +78,6 @@ int main(){
     // } while (ch != 'n' || ch == 'y');
     exp = "(a+b)*c";
     inToPost(exp);
+
+    return 0;
 }
