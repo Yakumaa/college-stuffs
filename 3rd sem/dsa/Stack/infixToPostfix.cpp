@@ -65,19 +65,24 @@ void inToPost(string s){
         result += st.top();
         st.pop();
     }
-    cout << result << endl;
+    cout << "The postfix expression: " << result << endl;
     
 }
 
 int main(){
     string exp;
     char ch;
-    // do
-    // {
-    //     cout << "En"
-    // } while (ch != 'n' || ch == 'y');
-    exp = "(a+b)*c";
-    inToPost(exp);
+    do
+    {
+        cout << "Enter the infix expression: ";
+        cin >> exp;
+        // exp = "(a+b)*c";
+        inToPost(exp);
+        cout<< "Do you want to continue? (y/n): ";
+        cin >> ch;
+    } while (ch != 'n' || ch == 'y');
+ 
+    
 
     return 0;
 }
