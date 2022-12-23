@@ -1,63 +1,3 @@
-// #include<stdio.h>
-// #include<stdlib.h>
-// //creating a node
-// struct node
-// {
-//     int info;
-//     struct node *next;
-// };
-// typedef struct node NodeType;
-
-
-// void display(struct node* head)
-// {
-//     NodeType *temp = head;
-//     while (temp != NULL)
-//     {
-//         printf("%d-> ", temp -> info);
-//         temp = temp -> next;
-//     }
-//     printf("NULL\n");
-    
-// };
-
-// int main(){
-//     NodeType *NewNode;
-//     NodeType *first, *second;
-//     NodeType *head = NULL;
-//     NodeType *temp;
-
-//     NewNode = (NodeType*)malloc(sizeof(NodeType));
-//     first = (NodeType*)malloc(sizeof(NodeType));
-//     second = (NodeType*)malloc(sizeof(NodeType));
-    
-//     first -> info = 88;
-//     first -> next = second;
-//     second ->info = 77;
-//     second ->next = NewNode;
-//     NewNode -> info = 99;
-//     NewNode -> next = NULL;
-
-//     //MAKE HEAD NOT NULL//
-//     // Check if the linked list is empty
-//     if (head == NULL)
-//     {
-//       head = NewNode;
-//     }
-//     else{
-//       // If the list is not empty, find the temp node
-//       while (temp ->next != NULL)
-//       {
-//         temp = temp ->next;
-//       }
-      
-//       // Set the next pointer of the temp node to the new node
-//       temp->next = NewNode;
-//     }
-//     display(head);
-//     return 0;
-// }
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -121,3 +61,64 @@ int main() {
 
   return 0;
 }
+
+
+// #include<stdio.h>
+// #include<stdlib.h>
+// //creating a node
+// struct node
+// {
+//     int info;
+//     struct node *next;
+// };
+// typedef struct node NodeType;
+
+
+// void display(struct node* head)
+// {
+//     NodeType *temp = head;
+//     while (temp != NULL)
+//     {
+//         printf("%d-> ", temp -> info);
+//         temp = temp -> next;
+//     }
+//     printf("NULL\n");
+    
+// };
+
+// int main(){
+//     NodeType *NewNode;
+//     NodeType *first, *second;
+//     NodeType *head = NULL;
+//     NodeType *temp;
+
+//     NewNode = (NodeType*)malloc(sizeof(NodeType));
+//     first = (NodeType*)malloc(sizeof(NodeType));
+//     second = (NodeType*)malloc(sizeof(NodeType));
+    
+//     first -> info = 88;
+//     first -> next = second;
+//     second ->info = 77;
+//     second ->next = NewNode;
+//     NewNode -> info = 99;
+//     NewNode -> next = NULL;
+
+//     //MAKE HEAD NOT NULL//
+//     // Check if the linked list is empty
+//     if (head == NULL)
+//     {
+//       head = NewNode;
+//     }
+//     else{
+//       // If the list is not empty, find the temp node
+//       while (temp ->next != NULL)
+//       {
+//         temp = temp ->next;
+//       }
+      
+//       // Set the next pointer of the temp node to the new node
+//       temp->next = NewNode;
+//     }
+//     display(head);
+//     return 0;
+// }
