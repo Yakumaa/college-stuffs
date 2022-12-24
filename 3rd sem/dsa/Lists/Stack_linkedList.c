@@ -7,7 +7,7 @@ struct Node
     struct Node *next;
 };
 typedef struct Node Nodetype;
-Nodetype *top, *bottom;
+Nodetype *top;
 
 void push(int item){
     Nodetype *NewNode;
