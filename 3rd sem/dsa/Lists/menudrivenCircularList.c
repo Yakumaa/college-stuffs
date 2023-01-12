@@ -16,8 +16,6 @@ void insertAtLast(int);
 void insertAtPosition(int);
 void deleteAtFirst();
 void deleteAtLast();
-void deleteAtPosition();
-void countNodes();
 void display();
 
 void main(){
@@ -28,7 +26,7 @@ void main(){
     do
     {
         printf("\n*********MENU***********\n");
-        printf(" 1. Insert at first\n 2. Insert at last\n 4. Delete first node\n 5. Delete last node\n 6. Display items\n ");
+        printf(" 1. Insert at first\n 2. Insert at last\n 3. Insert at position\n 4. Delete first node\n 5. Delete last node\n 6. Display items\n 7. Quit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
         switch (choice)
@@ -43,11 +41,11 @@ void main(){
             scanf("%d", &item);
             insertAtLast(item);
             break;
-        // case 3:
-        //     printf("Enter item to be inserted at specified position: ");
-        //     scanf("%d", &item);
-        //     insertAtPosition(item);
-        //     break;
+        case 3:
+            printf("Enter item to be inserted at specified position: ");
+            scanf("%d", &item);
+            insertAtPosition(item);
+            break;
         case 4:
             deleteAtFirst();
             break;
@@ -57,6 +55,8 @@ void main(){
         case 6:
             display();
             break;
+        case 7: // Quit
+          break;
         default:
             printf("\nwrong selection!");
         }
@@ -114,42 +114,42 @@ void insertAtLast(int item) {
   }
 }
 
-// void insertAtPosition(int item) {
-//   int position;
-//   printf("Enter the position of node at which you want to insert a new node: ");
-//   scanf("%d", &position);
+void insertAtPosition(int item) {
+  int position;
+  printf("Enter the position of node at which you want to insert a new node: ");
+  scanf("%d", &position);
 
-//   // Check if the position is valid
-//   if (position < 1) {
-//     printf("Invalid position\n");
-//     return;
-//   }
+  // Check if the position is valid
+  if (position < 1) {
+    printf("Invalid position\n");
+    return;
+  }
 
-//   // Create a new node
-//   NodeType *NewNode; 
-//   NewNode = (NodeType*)malloc(sizeof(NodeType));
-//   NewNode->info = item;
-//   NewNode->next = NULL;
+  // Create a new node
+  NodeType *NewNode; 
+  NewNode = (NodeType*)malloc(sizeof(NodeType));
+  NewNode->info = item;
+  NewNode->next = NULL;
 
-//   // Check if the linked list is empty
-//   if (first == NULL) {
-//     // If the list is empty, set the head of the list to the new node
-//     first = NewNode;
-//     last = NewNode;
-//   } else {
-//     // If the list is not empty, find the node at the specified position
-//     NodeType* temp = first;
-//     int i = 1;
-//     while (i < position && temp->next != NULL) {
-//       temp = temp->next;
-//       i++;
-//     }
+  // Check if the linked list is empty
+  if (first == NULL) {
+    // If the list is empty, set the head of the list to the new node
+    first = NewNode;
+    last = NewNode;
+  } else {
+    // If the list is not empty, find the node at the specified position
+    NodeType* temp = first;
+    int i = 1;
+    while (i < position && temp->next != NULL) {
+      temp = temp->next;
+      i++;
+    }
 
-//     // Insert the new node after the node at the specified position
-//     NewNode->next = temp->next;
-//     temp->next = NewNode;
-//   }
-// }
+    // Insert the new node after the node at the specified position
+    NewNode->next = temp->next;
+    temp->next = NewNode;
+  }
+}
 
 void deleteAtFirst(){
   NodeType *temp;
