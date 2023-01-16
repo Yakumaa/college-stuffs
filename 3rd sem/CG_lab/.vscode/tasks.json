@@ -3,13 +3,19 @@
         {
             "type": "cppbuild",
             "label": "C/C++: g++ build active file",
-            "command": "/usr/bin/g++",
+            "command": "C:\\MinGW\\bin\\g++.exe",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}",
+                "-lbgi",
+                "-lgdi32",
+                "-lcomdlg32",
+                "-luuid",
+                "-loleaut32",
+                "-lole32",
                 "-lGLU",
                 "-lGL",
                 "-lglut"

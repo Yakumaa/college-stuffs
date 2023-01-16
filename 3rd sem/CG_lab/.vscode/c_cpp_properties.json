@@ -1,14 +1,17 @@
 {
     "configurations": [
         {
-            "name": "Linux",
+            "name": "Win32",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "C:/MinGW/include"
             ],
-            "defines": [],
-            "cStandard": "c17",
-            "cppStandard": "c++17",
-            "intelliSenseMode": "linux-gcc-x64"
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "C:\\MinGW\\bin\\g++"
         }
     ],
     "version": 4
