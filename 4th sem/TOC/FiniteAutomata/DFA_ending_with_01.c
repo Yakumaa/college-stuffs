@@ -6,30 +6,23 @@ int transition(int state, char c) {
     switch(state) {
         case 0:
             if (c == '0') {
-                return 0;
-            } else if (c == '1') {
                 return 1;
+            } else if (c == '1') {
+                return 0;
             }
             break;
         case 1:
             if (c == '0') {
-                return 2;
-            } else if (c == '1') {
                 return 1;
+            } else if (c == '1') {
+                return 2;
             }
             break;
         case 2:
             if (c == '0') {
-                return 0;
-            } else if (c == '1') {
-                return 3;
-            }
-            break;
-        case 3:
-            if (c == '0') {
-                return 2;
-            } else if (c == '1') {
                 return 1;
+            } else if (c == '1') {
+                return 0;
             }
             break;
     }
@@ -49,7 +42,7 @@ int main() {
             return 0;
         }
     }
-    if (state == 3) {
+    if (state == 2) {
         printf("The input string is accepted by the DFA.\n");
     } else {
         printf("The input string is not accepted by the DFA.\n");
