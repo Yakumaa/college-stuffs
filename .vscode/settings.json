@@ -1,7 +1,11 @@
 {
     "files.associations": {
-        "array": "c",
-        "string": "c"
+      "\"*.module\"": "\"php\"",
+      "array": "c",
+      "string": "c",
+      "iostream": "cpp",
+      "limits": "cpp",
+      "ostream": "cpp"
     },
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter"
