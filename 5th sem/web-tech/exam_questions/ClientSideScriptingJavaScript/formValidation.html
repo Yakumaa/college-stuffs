@@ -1,0 +1,101 @@
+<!-- Design a form containing text box for username, password field for password, radio button for gender and checkbox for
+hobbies. Write a program for client-side validation of the form for the username and password field as required fields,
+length of username should be 5, the radio button and checkbox should be checked. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation</title>
+  <!-- write the css code here -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+    #username, #password {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <form id="loginForm" method="POST">
+    <h2>Login</h2>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <br>
+    <label>Gender:</label>
+    <label><input type="radio" value="M" name="gender">Male</label>
+    <label><input type="radio" value="F" name="gender">Female</label>
+    <label><input type="radio" value="O" name="gender">Others</label>
+
+    <br>
+    <label>Hobbies:</label>
+    <label><input type="checkbox" value="reading" name="hobbies">Reading</label>
+    <label><input type="checkbox" value="writing" name="hobbies">Writing</label>
+    <label><input type="checkbox" value="coding" name="hobbies">Coding</label>
+
+    <button type="button" onclick="validateLogin()">Login</button>
+  </form>
+  <script>
+    function validateLogin() {
+      let username = document.getElementById("username").value;
+      let password = document.getElementById("password").value;
+      let gender = document.getElementsByName("gender");
+      let hobbies = document.getElementsByName("hobbies");
+      if (username.length < 5) {
+        alert("Username should be atleast 5 characters long");
+      } else if (password.length < 8) {
+        alert("Password should be atleast 8 characters long");
+      }
+      // the password should start with a digit and end with $
+      else if (!password.match(/^\d.*\$$/)) {
+        alert("Password should start with a digit and end with $");
+      }
+      else if(!(gender[0].checked || gender[1].checked || gender[2].checked)){
+        alert("Please Select your Gender");
+      }
+      else if(!(hobbies[0].checked || hobbies[1].checked || hobbies[2].checked)){
+        alert("Please Select atleast one of your Hobbies");
+      }
+      else {
+        alert("Login Successful");
+      }
+    }
+  </script>
+</body>
+</html>
