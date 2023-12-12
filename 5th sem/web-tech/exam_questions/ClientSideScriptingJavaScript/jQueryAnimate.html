@@ -1,0 +1,34 @@
+<!-- jquery syntax -->
+<!-- $(selector).animate({params},speed,callback); -->
+<!-- Required. The CSS property to animate. -->
+<!-- Required. The speed of the animation, in milliseconds. -->
+<!-- Optional. A callback function to be executed after the animation completes. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jquery animation</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+  <script>
+    $(document).ready(function(){
+      $("button").click(function(){
+        $("div").animate({
+          left: '250px',
+          opacity: '0.5',
+          height: '150px',
+          width: '150px'
+        });
+      });
+    });
+  </script>
+
+  <button>Start Animation</button>
+  <div style="background-color: red; height: 100px; width: 100px; position: absolute;"></div>
+  
+</body>
+</html>

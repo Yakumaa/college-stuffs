@@ -1,0 +1,28 @@
+<!-- //javascript code to set and get a cookie -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Handling Cookie</title>
+</head>
+<body>
+  <input type="button" value="Set Cookie" onclick="setCookie()">
+  <input type="button" value="Get Cookie" onclick="getCookie()">
+
+  <script>
+    function setCookie() {
+      document.cookie = "username=John Doe; expires=Thu, 18 Dec 2021 12:00:00 UTC; path=/";
+    }
+
+    function getCookie() {
+      if (document.cookie == "") {
+        alert("No cookie found");
+      }
+      else
+        alert(document.cookie);
+    }
+  </script>
+</body>
+</html>
