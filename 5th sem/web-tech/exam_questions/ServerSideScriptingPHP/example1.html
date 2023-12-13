@@ -1,0 +1,89 @@
+<!-- develop a simple website that stores its contents in database 
+and displays the contents of the database in a tabular format. 
+Assume at least five different contents. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>index</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    form {
+      width: 50%;
+      margin: 0 auto;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <form action="example1FormSubmit.php" method="post" onsubmit="return validateForm()">
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" placeholder="Enter your name">
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" placeholder="Enter your email">
+    <label for="phone">Phone</label>
+    <input type="text" name="phone" id="phone" placeholder="Enter your phone">
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    function validateForm() {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var phone = document.getElementById("phone").value;
+
+      if (name == "" || email == "" || phone == "") {
+        alert("Please fill all the fields");
+        return false;
+      }
+
+      else if (isNaN(phone)) {
+        alert("Phone number should be a number");
+        return false;
+      }
+
+      else if (phone.length != 10) {
+        alert("Phone number should be 10 digits");
+        return false;
+      }
+
+      else if (email.indexOf("@") == -1) {
+        alert("Email should contain @");
+        return false;
+      }
+
+      else if (email.indexOf(".") == -1) {
+        alert("Email should contain .");
+        return false;
+      }
+
+      // else {
+      //   alert("Form submitted successfully");
+      //   return true;
+      // }
+      return true;
+    }
+  </script>
+  
+</body>
+</html>
