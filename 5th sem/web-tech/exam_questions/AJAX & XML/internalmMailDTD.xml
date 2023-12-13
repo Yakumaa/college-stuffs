@@ -1,0 +1,20 @@
+<!-- write internal and external DTD to describe "mail" as a root element
+ and "to","from","subject"and "message" as child elements of "mail" element. -->
+
+<!-- Internal DTD -->
+
+<!DOCTYPE mail [
+    <!ELEMENT mail (to,from,subject,message)>
+    <!ELEMENT to (#PCDATA)>
+    <!ELEMENT from (#PCDATA)>
+    <!ELEMENT subject (#PCDATA)>
+    <!ELEMENT message (#PCDATA)>
+]>
+
+<mail>
+    <to>Brock</to>
+    <from>John</from>
+    <subject>Test</subject>
+    <message>Test message</message>
+</mail>
+

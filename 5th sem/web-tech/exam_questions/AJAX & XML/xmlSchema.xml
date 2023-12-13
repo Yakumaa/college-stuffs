@@ -1,0 +1,6 @@
+<!-- write a schema to describe name as root element and firstname, lastname as child elements of name element. -->
+
+<name xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xmlSchema.xsd">
+    <firstname>John</firstname>
+    <lastname>Doe</lastname>
+</name>

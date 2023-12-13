@@ -1,0 +1,8 @@
+<!DOCTYPE mail SYSTEM "externalMail.dtd">
+
+<mail>
+    <to>Brock</to>
+    <from>John</from>
+    <subject>Test</subject>
+    <message>Test message</message>
+</mail>
