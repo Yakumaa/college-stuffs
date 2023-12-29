@@ -1,0 +1,50 @@
+<!-- create an xml file containing records of employee having elements of simple and complex types. Write a schema to validate the xml file. Write a xslt to display the records in a table format. -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<!-- Define simple types -->
+  <xs:simpleType name="idType">
+      <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+
+  <xs:simpleType name="positionType">
+      <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <xs:simpleType name="departmentType">
+      <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <xs:simpleType name="salaryType">
+      <xs:restriction base="xs:decimal"/>
+  </xs:simpleType>
+
+<!-- Define complex types -->
+  <xs:complexType name="nameType">
+      <xs:sequence>
+          <xs:element name="first" type="xs:string"/>
+          <xs:element name="last" type="xs:string"/>
+      </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="employeeType">
+      <xs:sequence>
+          <xs:element name="id" type="idType"/>
+          <xs:element name="name" type="nameType"/>
+          <xs:element name="position" type="positionType"/>
+          <xs:element name="department" type="departmentType"/>
+          <xs:element name="salary" type="salaryType"/>
+      </xs:sequence>
+  </xs:complexType>
+
+<!-- Define the root element -->
+  <xs:element name="employees">
+      <xs:complexType>
+          <xs:sequence>
+              <xs:element name="employee" type="employeeType" maxOccurs="unbounded"/>
+          </xs:sequence>
+      </xs:complexType>
+  </xs:element>
+
+</xs:schema>

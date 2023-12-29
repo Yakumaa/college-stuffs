@@ -1,6 +1,6 @@
 <!-- create a xml file with elements and attributes and write a xslt to display the elements and attributes in a table format. -->
 
-<xml-stylesheet type="text/XSL" href="xslt.xsl"?>
+<?xml-stylesheet type="text/XSL" href="xslt.xsl"?>
 <student>
   <studentInfo>
     <name>Harry</name>
