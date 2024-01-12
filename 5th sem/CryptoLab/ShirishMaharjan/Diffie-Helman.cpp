@@ -4,16 +4,6 @@
 #include <cmath>
 using namespace std;
 
-/*
- * Cpp program to implement Diffie Hellman Key Exchange Algorithm
- */
-
-#include <iostream>
-#include <cmath>
-// #include "./returnName.h"
-
-using namespace std;
-
 int modExp(int base, int exponent, int modulus)
 {
     if (exponent == 0)
@@ -69,5 +59,12 @@ int main()
 
     } while (true);
     cin.get();
+
+    cout << "-------------------------------------------------------" << endl;
+    cout << "Lab No.: 16" <<endl;
+    cout << "Name: Shirish Maharjan" <<endl;
+    cout << "Roll No.: 20-00036-5 (Section: 'A')" <<endl;
+    cout << "-------------------------------------------------------" << endl;
+
     return 0;
 }

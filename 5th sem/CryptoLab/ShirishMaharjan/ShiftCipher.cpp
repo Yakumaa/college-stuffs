@@ -58,5 +58,11 @@ int main() {
         return 1; // Exit with an error code
     }
 
+    cout << "-------------------------------------------------------" << endl;
+    cout << "Lab N0.: 1" <<endl;
+    cout << "Name: Shirish Maharjan" <<endl;
+    cout << "Roll N0.: 20-00036-5 (Section: 'A')" <<endl;
+    cout << "-------------------------------------------------------" << endl;
+
     return 0; // Exit successfully
 }

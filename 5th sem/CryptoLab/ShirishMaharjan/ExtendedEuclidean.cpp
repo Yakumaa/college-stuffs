@@ -63,5 +63,11 @@ int main() {
     // Display the results in a tabular format
     displayResults(a, b, q, r, x, y);
 
+    cout << "-------------------------------------------------------" << endl;
+    cout << "Lab No.: 8" <<endl;
+    cout << "Name: Shirish Maharjan" <<endl;
+    cout << "Roll No.: 20-00036-5 (Section: 'A')" <<endl;
+    cout << "-------------------------------------------------------" << endl;
+
     return 0; // Exit successfully
 }

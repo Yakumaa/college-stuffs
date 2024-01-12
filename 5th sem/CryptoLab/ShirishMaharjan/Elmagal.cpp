@@ -49,5 +49,11 @@ int main()
     int decryptedMessage = (power(y1, p - 1 - x, p) * y2) % p;
     cout << "Decrypted message: " << decryptedMessage << endl;
 
+    cout << "-------------------------------------------------------" << endl;
+    cout << "Lab No.: 18" <<endl;
+    cout << "Name: Shirish Maharjan" <<endl;
+    cout << "Roll No.: 20-00036-5 (Section: 'A')" <<endl;
+    cout << "-------------------------------------------------------" << endl;
+
     return 0;
 }

@@ -33,6 +33,13 @@ int main()
 
     } while (true);
     cin.get();
+
+    cout << "-------------------------------------------------------" << endl;
+    cout << "Lab No.: 12" <<endl;
+    cout << "Name: Shirish Maharjan" <<endl;
+    cout << "Roll No.: 20-00036-5 (Section: 'A')" <<endl;
+    cout << "-------------------------------------------------------" << endl;
+
     return 0;
 }
 

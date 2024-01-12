@@ -57,5 +57,11 @@ int main() {
         cout << "Multiplicative inverse of " << a << " modulo " << n << " is: " << multiplicativeInverse << endl;
     }
 
+    cout << "-------------------------------------------------------" << endl;
+    cout << "Lab No.: 9" <<endl;
+    cout << "Name: Shirish Maharjan" <<endl;
+    cout << "Roll No.: 20-00036-5 (Section: 'A')" <<endl;
+    cout << "-------------------------------------------------------" << endl;
+
     return 0; // Exit successfully
 }

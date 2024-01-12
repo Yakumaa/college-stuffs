@@ -2,15 +2,12 @@
 
 #include <iostream>
 #include <math.h>
-
 using namespace std;
 
 // to find gcd
-int gcd(int a, int h)
-{
+int gcd(int a, int h){
     int temp;
-    while (1)
-    {
+    while (1){
         temp = a % h;
         if (temp == 0)
             return h;
@@ -19,13 +16,11 @@ int gcd(int a, int h)
     }
 }
 
-int main()
-{
+int main(){
     // 2 random prime numbers
     double p, q;
     char choice;
-    do
-    {
+    do{
         cout << "Enter two prime numbers: ";
         cin >> p >> q;
 
@@ -37,8 +32,7 @@ int main()
         double e = 2;
 
         // for checking co-prime which satisfies e>1
-        while (e < totient)
-        {
+        while (e < totient){
             count = gcd(e, totient);
             if (count == 1)
                 break;
@@ -75,5 +69,12 @@ int main()
         cout << "Do you want to continue? (y/n): ";
         cin >> choice;
     } while (choice == 'y' || choice == 'Y');
+
+    cout << "-------------------------------------------------------" << endl;
+    cout << "Lab No.: 17" <<endl;
+    cout << "Name: Shirish Maharjan" <<endl;
+    cout << "Roll No.: 20-00036-5 (Section: 'A')" <<endl;
+    cout << "-------------------------------------------------------" << endl;
+
     return 0;
 }

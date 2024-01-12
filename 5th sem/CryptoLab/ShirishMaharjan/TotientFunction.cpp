@@ -26,5 +26,12 @@ int main()
     cout << "Enter a number: ";
     cin >> n;
     cout << "phi(" << n << ") = " << phi(n) << endl;
+
+    cout << "-------------------------------------------------------" << endl;
+    cout << "Lab No.: 13" <<endl;
+    cout << "Name: Shirish Maharjan" <<endl;
+    cout << "Roll No.: 20-00036-5 (Section: 'A')" <<endl;
+    cout << "-------------------------------------------------------" << endl;
+
     return 0;
 }
