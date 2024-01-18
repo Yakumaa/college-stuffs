@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parse JSON with JavaScript</title>
+</head>
+<body>
+<script>
+    var jsonString = '{"name": "Shirish maharjan", "age": 21, "city": "KTM", "skills": ["JavaScript", "HTML", "CSS"]}';
+    var parsedData = JSON.parse(jsonString);
+    document.write("<p>Name: " + parsedData.name + "</br>");
+    document.write("Age: " + parsedData.age + "</br>");
+    document.write("City: " + parsedData.city + "</br>");
+    document.write("Skills: " + parsedData.skills + "</p>");
+</script>
+</body>
+</html>

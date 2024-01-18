@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+      var person = {
+        name: 'John Doe',
+        age: 25,
+        gender: 'Male',
+      };
+      function Car(make, model, year) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+      }
+      console.log('Person Object: ');
+      console.log('Name: ' + person.name);
+      console.log('Age: ' + person.age);
+      console.log('Gender' + person.gender);
+      var myCar = new Car('Toyota', 'Camry', 2022);
+      console.log(myCar);
+    </script>
+  </body>
+</html>

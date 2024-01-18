@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jQuery Event Handling</title>
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  </head>
+  <body>
+    <button id="myButton">Click me!</button>
+    <p id="myParagraph">Mouse over me!</p>
+    <input type="text" id="myInput" placeholder="Type something" />
+    <form id="myForm">
+      <input type="submit" value="Submit Form" />
+    </form>
+    <img
+      id="myImage"
+      src="../Lab1-HTML/images/1.PNG" width="100px"
+      alt="Sample Image"
+    />
+    <script>
+      // On Click Event
+      $('#myButton').on('click', function () {
+        alert('Button clicked!');
+      });
+      // On Mouse out Event
+      $('#myParagraph').on('mouseout', function () {
+        $(this).css('background-color', 'red');
+      });
+      // On Key Up Event
+      $('#myInput').on('keyup', function () {
+        var inputValue = $(this).val();
+        alert('Input value:', inputValue);
+      });
+      // On Form Submit Event
+      $('#myForm').on('submit', function (event) {
+        event.preventDefault();
+        alert('Form submitted!');
+      });
+    </script>
+  </body>
+</html>
