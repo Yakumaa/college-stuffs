@@ -1,12 +1,10 @@
 #include <stdio.h>
 #include <string.h>
-#include <process.h>
 #include <stdlib.h>
 
 char s[20], stack[20];
 
-int main()
-{
+int main(){
     char m[5][6][4] = {"tb", " ", " ", "tb", " ", " ", " ", "+tb", " ", " ", "n", "n", "fc", " ", " ", "fc", " ", " ", " ", "n", "*fc", " a", "n", "n", "i", " ", " ", "(e)", " ", " "};
     int size[5][6] = {2, 0, 0, 2, 0, 0, 0, 3, 0, 0, 1, 1, 2, 0, 0, 2, 0, 0, 0, 1, 3, 0, 1, 1, 1, 0, 0, 3, 0, 0};
     int i, j, k, n, str1, str2;
@@ -21,15 +19,12 @@ int main()
     j = 0;
     printf("Stack\t\tInput\n");
     printf("_________________________\n");
-    while ((stack[i] != '$') && (s[j] != '$'))
-    {
-        if (stack[i] == s[j])
-        {
+    while ((stack[i] != '$') && (s[j] != '$')){
+        if (stack[i] == s[j]){
             i--;
             j++;
         }
-        switch (stack[i])
-        {
+        switch (stack[i]){
         case 'e':
             str1 = 0;
             break;
@@ -46,8 +41,7 @@ int main()
             str1 = 4;
             break;
         }
-        switch (s[j])
-        {
+        switch (s[j]){
         case 'i':
             str2 = 0;
             break;
@@ -67,8 +61,7 @@ int main()
             str2 = 5;
             break;
         }
-        if (m[str1][str2][0] == '\0')
-        {
+        if (m[str1][str2][0] == '\0'){
             printf("\nERROR");
             exit(0);
         }
@@ -76,8 +69,7 @@ int main()
             i--;
         else if (m[str1][str2][0] == 'i')
             stack[i] = 'i';
-        else
-        {
+        else{
             for (k = size[str1][str2] - 1; k >= 0; k--)
                 stack[i++] = m[str1][str2][k];
             i--;

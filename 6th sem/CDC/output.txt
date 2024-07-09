@@ -1,0 +1,18 @@
+MOV R0, a
+ADD R0, b
+MOV t1, R0
+MOV R0, c
+MUL R0, d
+MOV t2, R0
+MOV R0, t1
+SUB R0, t2
+MOV t3, R0
+MOV R0, t3
+DIV R0, t2
+MOV t4, R0
+MOV R0, t4
+MOV y, R0
+MOV R0, t4
+MOV y, R0
+
+

@@ -10,8 +10,7 @@ void follow(char *Result, char c);
 void first(char *Result, char c);
 void addToResultSet(char[], char);
 
-int main()
-{
+int main(){
     int i;
     char c;
     printf("Enter the number of productions: ");
@@ -30,8 +29,7 @@ int main()
     return 0;
 }
 
-void follow(char *Result, char c)
-{
+void follow(char *Result, char c){
     int k;
     subResult[0] = '\0';
     Result[0] = '\0';
@@ -54,15 +52,12 @@ void follow(char *Result, char c)
     }
 }
 
-void first(char *R, char c)
-{
+void first(char *R, char c){
     int k, m;
     if (!(isupper(c)) && c != '#')
         addToResultSet(R, c);
-    for (k = 0; k < n; k++)
-    {
-        if (a[k][0] == c)
-        {
+    for (k = 0; k < n; k++){
+        if (a[k][0] == c){
             if (a[k][2] == '#' && c != a[k][0])
                 follow(R, a[k][0]);
             else if (!(isupper(a[k][2])) && a[k][2] != '#')
@@ -75,8 +70,7 @@ void first(char *R, char c)
     }
 }
 
-void addToResultSet(char Result[], char val)
-{
+void addToResultSet(char Result[], char val){
     int k;
     for (k = 0; Result[k] != '\0'; k++)
     {
