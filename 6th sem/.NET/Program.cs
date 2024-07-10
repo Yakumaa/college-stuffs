@@ -52,6 +52,62 @@ namespace Lab1
             employee.Display();
             employee.CalcTax();
             Console.WriteLine("----------------------------------\n");
+
+            // Question 7
+            Console.WriteLine("7. Inheritance");
+            Console.WriteLine("Demonstrating Single-level Inheritance:");
+            Car myCar = new Car("Toyota", 2022, 4);
+            myCar.DisplayInfo();
+
+            Console.WriteLine("\nDemonstrating Multi-level Inheritance:");
+            ElectricCar myElectricCar = new ElectricCar("Tesla", 2023, 4, 75);
+            myElectricCar.DisplayInfo();
+            Console.WriteLine("----------------------------------\n");
+
+            // Question 8
+            Console.WriteLine("8. Use of base keyword");
+            Dog dog = new Dog();
+            dog.Eat();
+            Console.WriteLine("----------------------------------\n");
+
+            // Question 9
+            Console.WriteLine("9. Method Overriding");
+            Parent obj = new Child();
+            obj.display();
+            Console.WriteLine("----------------------------------\n");
+
+            // Question 10
+            Console.WriteLine("10. Multiple Inheritance using Interface");
+            Human Ben = new Human();
+            Ben.Walk();
+            Ben.Swim();
+            Console.WriteLine("----------------------------------\n");
+
+            // Question 11
+            Console.WriteLine("11. Abstract Class");
+            DerivedClass obj1 = new DerivedClass();
+            // AbsClass obj2 = new AbsClass();  // Cannot create instance of abstract class
+            obj1.AbsMethod();
+            obj1.NonAbsMethod();
+            Console.WriteLine("----------------------------------\n");
+
+            // Question 12
+            Console.WriteLine("12. Exception Handling");
+            ExceptionHandling eh = new ExceptionHandling();
+            eh.Divide(10, 0);
+            Console.WriteLine("----------------------------------\n");
+
+            // Question 13
+            Console.WriteLine("13. Interface");
+            Ben ben = new Ben();
+            ben.Greetings();
+            Console.WriteLine("----------------------------------\n");
+
+            // Question 14
+            Console.WriteLine("14. Lambda Expression");
+            LambdaExpression lambda = new LambdaExpression();
+            lambda.Lambda();
+            Console.WriteLine("----------------------------------\n");
         }
     }
 }
