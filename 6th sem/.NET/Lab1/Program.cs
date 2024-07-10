@@ -27,7 +27,7 @@ namespace Lab1
             Calculate calculate = new Calculate();
             calculate.setCalc(4, 8);
             calculate.calcSum();
-            Console.WriteLine("Multiplication of 10 and 5 is " + calculate.calcMulti());
+            Console.WriteLine("Multiplication of 4 and 8 is " + calculate.calcMulti());
             calculate.calcDifference();
             Console.WriteLine("----------------------------------\n");
 
